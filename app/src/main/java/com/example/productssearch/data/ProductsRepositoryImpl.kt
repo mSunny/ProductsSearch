@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class ProductsRepositoryImpl @Inject constructor(
     private val productsApiService: ProductsApiService): ProductsRepository {
-    override fun getProductsPage(query: String, page: Int): Flowable<PagingData<Product>> {
+    override fun getProducts(query: String): Flowable<PagingData<Product>> {
         return Pager(
             config = PagingConfig(
                 enablePlaceholders = false,
