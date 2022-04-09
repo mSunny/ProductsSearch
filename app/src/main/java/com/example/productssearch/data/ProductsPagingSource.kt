@@ -2,8 +2,8 @@ package com.example.productssearch.data
 
 import androidx.paging.PagingState
 import androidx.paging.rxjava3.RxPagingSource
-import com.example.productssearch.data.models.Product
-import com.example.productssearch.data.models.ProductsPage
+import com.example.productssearch.domain.models.Product
+import com.example.productssearch.domain.models.ProductsPage
 import com.example.productssearch.data.network.ProductsApiService
 import io.reactivex.rxjava3.core.Single
 

@@ -1,4 +1,4 @@
-package com.example.productssearch.data.models
+package com.example.productssearch.domain.models
 
 data class ReviewInformation(
     val reviews: List<Review>,

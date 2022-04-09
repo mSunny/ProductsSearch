@@ -1,7 +1,7 @@
-package com.example.productssearch.data
+package com.example.productssearch.domain
 
 import androidx.paging.PagingData
-import com.example.productssearch.data.models.Product
+import com.example.productssearch.domain.models.Product
 import io.reactivex.rxjava3.core.Flowable
 
 interface ProductsRepository {

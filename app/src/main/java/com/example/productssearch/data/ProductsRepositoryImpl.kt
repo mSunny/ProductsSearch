@@ -4,8 +4,9 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.rxjava3.flowable
-import com.example.productssearch.data.models.Product
+import com.example.productssearch.domain.models.Product
 import com.example.productssearch.data.network.ProductsApiService
+import com.example.productssearch.domain.ProductsRepository
 import io.reactivex.rxjava3.core.Flowable
 import javax.inject.Inject
 
