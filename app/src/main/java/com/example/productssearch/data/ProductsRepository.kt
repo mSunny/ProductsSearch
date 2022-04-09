@@ -1,8 +1,9 @@
 package com.example.productssearch.data
 
-import com.example.productssearch.data.models.ProductsPage
-import io.reactivex.rxjava3.core.Single
+import androidx.paging.PagingData
+import com.example.productssearch.data.models.Product
+import io.reactivex.rxjava3.core.Flowable
 
 interface ProductsRepository {
-    fun getProductsPage(query: String, page: Int): Single<ProductsPage>
+    fun getProductsPage(query: String, page: Int): Flowable<PagingData<Product>>
 }
