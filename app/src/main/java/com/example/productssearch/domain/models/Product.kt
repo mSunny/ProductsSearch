@@ -6,9 +6,9 @@ data class Product(
     val reviewInformation: ReviewInformation,
     val USPs: List<String>,
     val availabilityState: Int, //???
-    val salesPriceIncVat: Int, //??
-    val listPriceIncVat: Int,
-    val listPriceExVat: Int, // 517.35537
+    val salesPriceIncVat: Double, //??
+    val listPriceIncVat: Double,
+    val listPriceExVat: Double, // 517.35537
     val productImage: String,
     val coolbluesChoiceInformationTitle: String,
     val promoIcon: PromoIcon,
