@@ -7,11 +7,11 @@ data class Product(
     val productId: Long,
     val productName: String,
     val reviewInformation: ReviewInformation,
-    val USPs: List<String>,
-    val availabilityState: Int, //???
-    val salesPriceIncVat: Double, //??
+    val USPs: List<String>, //kept this field name just for time saving
+    val availabilityState: Int,
+    val salesPriceIncVat: Double,
     val listPriceIncVat: Double,
-    val listPriceExVat: Double, // 517.35537
+    val listPriceExVat: Double,
     val productImage: String,
     val coolbluesChoiceInformationTitle: String,
     val promoIcon: PromoIcon?,

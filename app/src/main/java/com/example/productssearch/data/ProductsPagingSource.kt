@@ -1,11 +1,10 @@
 package com.example.productssearch.data
 
-import android.util.Log
 import androidx.paging.PagingState
 import androidx.paging.rxjava3.RxPagingSource
+import com.example.productssearch.data.network.ProductsApiService
 import com.example.productssearch.domain.models.Product
 import com.example.productssearch.domain.models.ProductsPage
-import com.example.productssearch.data.network.ProductsApiService
 import io.reactivex.rxjava3.core.Single
 
 class ProductsPagingSource(
@@ -21,15 +20,7 @@ class ProductsPagingSource(
 
     override fun loadSingle(params: LoadParams<Int>): Single<LoadResult<Int, Product>> {
         val position = params.key ?: 1
-        Log.d("onBindViewHolder", "getProductsPage")
         return productsApiService.getProductsPage(query, position)
-            .doOnError {
-                Log.d("onBindViewHolder", "errror " + it.toString() )
-            }
-            .map{
-                Log.d("onBindViewHolder", "loadSingle " + it.currentPage )
-                it
-            }
             .map { toLoadResult(it, position) }
             .onErrorReturn { LoadResult.Error(it) }
     }
@@ -41,5 +32,4 @@ class ProductsPagingSource(
             nextKey = if (position == data.pageCount) null else position + 1
         )
     }
-
 }

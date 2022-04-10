@@ -1,6 +1,5 @@
 package com.example.productssearch.presentation
 
-import android.util.Log
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -21,7 +20,6 @@ class ProductsAdapter: PagingDataAdapter<Product, ProductViewHolder>(COMPARATOR)
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         getItem(position)?.let {
-            Log.d("onBindViewHolder", "position " + position + " " + it.productName )
             holder.bind(it)
         }
     }
