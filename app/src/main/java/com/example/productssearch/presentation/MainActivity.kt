@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         adapter = ProductsAdapter()
         binding.productsList.layoutManager = LinearLayoutManager(this)
         binding.productsList.adapter = adapter
-
     }
 
     override fun onStart() {
@@ -57,10 +56,15 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         val searchView: SearchView = searchItem.actionView as SearchView
         searchView.queryHint = getString(R.string.search_products)
         searchView.setOnQueryTextListener(this)
-        searchView.isIconified = true
+        searchView.isIconified = mainViewModel.searchIconified
+        searchView.setQuery(mainViewModel.searchQuery, false)
         searchView.setOnCloseListener {
+            mainViewModel.onSearchClose()
             subscribeToQuery(null)
             false
+        }
+        searchView.setOnSearchClickListener {
+            mainViewModel.onSearchClick()
         }
         return true
     }
@@ -71,6 +75,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextChange(newText: String?): Boolean {
+        mainViewModel.onSearchQueryTextChange(newText?:"")
         return false
     }
 
