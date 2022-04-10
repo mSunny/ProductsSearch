@@ -2,15 +2,42 @@
     <!-- Base application theme. -->
     <style name="Theme.ProductsSearch" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/orange_500</item>
+        <item name="colorSecondaryVariant">@color/orange_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="TextDescription">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="android:textSize">@dimen/description_text_size</item>
+    </style>
+
+    <style name="TextDescription.Secondary">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextPrice">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="TextCaption">
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="android:textSize">@dimen/caption_text_size</item>
     </style>
 </resources>

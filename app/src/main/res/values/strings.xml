@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProductsSearch</string>
+    <string name="product_image">Product image</string>
+    <string name="action_search">Search</string>
+    <string name="search_products">Search Products</string>
+    <string name="product_reviews">%.1f from %d reviews</string>
 </resources>
